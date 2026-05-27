@@ -12,7 +12,8 @@ public class Conexao {
     public static void inicializarBanco() {
         String sql = "CREATE TABLE IF NOT EXISTS usuarios (" +
                      "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                     "login TEXT NOT NULL UNIQUE," +
+                     "usuario TEXT NOT NULL UNIQUE," +
+                     "email TEXT NOT NULL UNIQUE," +
                      "senha TEXT NOT NULL)";
         
         try (Connection conn = conectar(); Statement stmt = conn.createStatement()) {
@@ -29,16 +30,46 @@ public class Conexao {
             System.out.println("Erro ao inicializar SQLite: " + e.getMessage());
         }
     }
-    public static void cadastrarUsuario(String login, String senha) {
-    String sql = "INSERT INTO usuarios (login, senha) VALUES (?, ?)";
-    try (Connection conn = conectar(); 
+   public static void cadastrarUsuario(
+        String usuario,
+        String email,
+        String senha) {
+
+    String sql = "INSERT INTO usuarios(usuario, email, senha) VALUES (?, ?, ?)";
+
+    try (Connection conn = conectar();
          PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        
-        pstmt.setString(1, login);
-        pstmt.setString(2, senha);
+
+        pstmt.setString(1, usuario);
+        pstmt.setString(2, email);
+        pstmt.setString(3, senha);
+
         pstmt.executeUpdate();
-        
+
     } catch (SQLException e) {
+
         System.out.println("Erro ao salvar: " + e.getMessage());
+
+    }
+}
+    public static boolean validarLogin(String email, String senha) {
+
+    String sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+
+    try (Connection conn = conectar();
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+        pstmt.setString(1, email);
+        pstmt.setString(2, senha);
+
+        ResultSet rs = pstmt.executeQuery();
+
+        return rs.next();
+
+    } catch (SQLException e) {
+
+        System.out.println("Erro no login: " + e.getMessage());
+
+        return false;
     }
 }

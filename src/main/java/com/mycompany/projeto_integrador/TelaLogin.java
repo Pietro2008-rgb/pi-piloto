@@ -1,9 +1,13 @@
-/*
+
+ /
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+ /
+ 
+ 
 package com.mycompany.projeto_integrador;
-
+ 
+ import javax.swing.JOptionPane; 
 /**
  *
  * @author 26.00755-9
@@ -28,30 +32,82 @@ public class TelaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        btnlogar = new java.awt.Button();
+        txtlogin = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        txtsenha = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tela_inicio_1.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        btnregistrar = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tela_inicio_400px.png"))); // NOI18N
+        btnlogar.setLabel("button1");
+        btnlogar.addActionListener(this::btnlogarActionPerformed);
+        getContentPane().add(btnlogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 470, 280, 50));
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        txtlogin.setViewportView(jTextArea2);
+
+        getContentPane().add(txtlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 240, 30));
+
+        txtsenha.setText("jPasswordField1");
+        getContentPane().add(txtsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 200, 30));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/592e7107-7100-4b61-82e7-df407124.png"))); // NOI18N
+        jLabel4.setText("jLabel2");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 10, 1110, 700));
+
         jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
-        );
+        btnregistrar.setLabel("button1");
+        btnregistrar.addActionListener(this::btnregistrarActionPerformed);
+        getContentPane().add(btnregistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 280, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlogarActionPerformed
+    String email = txtlogin.getText();
+    String senha = txtsenha.getText();
+
+    boolean usuarioExiste = Conexao.validarLogin(email, senha);
+
+    if(usuarioExiste){
+
+        JOptionPane.showMessageDialog(null, "Login realizado!");
+
+    // ABRE A TELA PRINCIPAL
+         TelaInicio tela = new TelaInicio();
+
+            tela.setVisible(true);
+
+               dispose();
+
+    }else{
+
+        JOptionPane.showMessageDialog(null,
+            "Usuário não encontrado!\nFaça o cadastro.");
+
+    // ABRE TELA DE REGISTRO
+        TelaRegistrar tela = new TelaRegistrar();
+
+            tela.setVisible(true);
+
+                dispose();
+}    // TODO add your handling code here:
+    }//GEN-LAST:event_btnlogarActionPerformed
+
+    private void btnregistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregistrarActionPerformed
+    TelaRegistrar tela = new TelaRegistrar();
+
+    tela.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnregistrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,7 +135,12 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private java.awt.Button btnlogar;
+    private java.awt.Button btnregistrar;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JScrollPane txtlogin;
+    private javax.swing.JPasswordField txtsenha;
     // End of variables declaration//GEN-END:variables
 }
