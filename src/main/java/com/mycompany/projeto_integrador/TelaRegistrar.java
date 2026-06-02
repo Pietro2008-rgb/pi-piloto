@@ -21,7 +21,6 @@ public class TelaRegistrar extends javax.swing.JFrame {
 
         txtemail = new javax.swing.JTextField();
         txtusuario = new javax.swing.JTextField();
-        btnvoltarparalogin = new java.awt.Button();
         btncriarconta = new java.awt.Button();
         txtsenha = new javax.swing.JTextField();
         txtconfirmarsenha = new javax.swing.JTextField();
@@ -30,30 +29,28 @@ public class TelaRegistrar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtemail.setText("");
-        getContentPane().add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 400, 260, -1));
+        txtemail.setText("jTextField1");
+        txtemail.addActionListener(this::txtemailActionPerformed);
+        getContentPane().add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 390, 230, 20));
 
-        txtusuario.setText("");
-        getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 350, 260, -1));
+        txtusuario.setText("jTextField1");
+        getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 342, 230, 20));
 
-        btnvoltarparalogin.setLabel("Voltar para Login");
-        btnvoltarparalogin.addActionListener(this::btnvoltarparaloginActionPerformed);
-        getContentPane().add(btnvoltarparalogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 610, 300, 40));
-
-        btncriarconta.setLabel("Criar Conta");
+        btncriarconta.setLabel("button1");
         btncriarconta.addActionListener(this::btncriarcontaActionPerformed);
-        getContentPane().add(btncriarconta, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 530, 320, 50));
+        getContentPane().add(btncriarconta, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 510, 270, 30));
 
-        txtsenha.setText("");
-        getContentPane().add(txtsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 450, 240, -1));
+        txtsenha.setText("jTextField1");
+        txtsenha.addActionListener(this::txtsenhaActionPerformed);
+        getContentPane().add(txtsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 210, 20));
 
-        txtconfirmarsenha.setText("");
+        txtconfirmarsenha.setText("jTextField1");
         txtconfirmarsenha.addActionListener(this::txtconfirmarsenhaActionPerformed);
-        getContentPane().add(txtconfirmarsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 500, 240, -1));
+        getContentPane().add(txtconfirmarsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, 210, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registre.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/roca7a95c9f0-a1c7-4c76-b67f-7fa4.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 1056, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 1056, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -84,11 +81,13 @@ public class TelaRegistrar extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btncriarcontaActionPerformed
 
-    private void btnvoltarparaloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvoltarparaloginActionPerformed
-        TelaLogin tela = new TelaLogin();
-        tela.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnvoltarparaloginActionPerformed
+    private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtemailActionPerformed
+
+    private void txtsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtsenhaActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -107,7 +106,6 @@ public class TelaRegistrar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btncriarconta;
-    private java.awt.Button btnvoltarparalogin;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField txtconfirmarsenha;
     private javax.swing.JTextField txtemail;

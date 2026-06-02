@@ -17,24 +17,44 @@ public class TelaInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         btnjogar = new javax.swing.JButton();
         btnperfil = new javax.swing.JButton();
+        btnconfig = new javax.swing.JButton();
         Jlabel1 = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnjogar.setText("Jogar");
+        btnjogar.setText(" ");
+        btnjogar.setBorderPainted(false);
+        btnjogar.setContentAreaFilled(false);
+        btnjogar.setFocusPainted(false);
         btnjogar.addActionListener(this::btnjogarActionPerformed);
-        getContentPane().add(btnjogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 290, 90));
+        getContentPane().add(btnjogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 290, 100));
 
-        btnperfil.setText("Perfil");
+        btnperfil.setText(" ");
+        btnperfil.setBorderPainted(false);
+        btnperfil.setContentAreaFilled(false);
+        btnperfil.setFocusPainted(false);
         btnperfil.addActionListener(this::btnperfilActionPerformed);
-        getContentPane().add(btnperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, 40));
+        getContentPane().add(btnperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 90, 40));
 
-        Jlabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tela_inicio (1).png"))); // NOI18N
+        btnconfig.setText(" ");
+        btnconfig.setBorderPainted(false);
+        btnconfig.setContentAreaFilled(false);
+        btnconfig.setFocusPainted(false);
+        btnconfig.addActionListener(this::btnconfigActionPerformed);
+        getContentPane().add(btnconfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 40, 140, 40));
+
+        Jlabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login (1).png"))); // NOI18N
         Jlabel1.setText("jLabel1");
-        getContentPane().add(Jlabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1030, 610));
+        getContentPane().add(Jlabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1030, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -50,6 +70,12 @@ public class TelaInicio extends javax.swing.JFrame {
         tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnperfilActionPerformed
+
+    private void btnconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconfigActionPerformed
+        TelaConfig tela = new TelaConfig();
+        tela.setVisible(true);
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnconfigActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -68,7 +94,10 @@ public class TelaInicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Jlabel1;
+    private javax.swing.JButton btnconfig;
     private javax.swing.JButton btnjogar;
     private javax.swing.JButton btnperfil;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }
