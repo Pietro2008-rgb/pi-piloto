@@ -29,18 +29,18 @@ public class TelaFinalQuiz extends javax.swing.JFrame {
         btnverperfil = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnverperfil.setText(" ");
         btnverperfil.setBorderPainted(false);
         btnverperfil.setContentAreaFilled(false);
         btnverperfil.setFocusPainted(false);
         btnverperfil.addActionListener(this::btnverperfilActionPerformed);
-        add(btnverperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 290, 50));
+        getContentPane().add(btnverperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 290, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mama (1).png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 606));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 606));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnverperfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnverperfilActionPerformed

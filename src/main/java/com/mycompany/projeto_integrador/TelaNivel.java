@@ -8,14 +8,14 @@ package com.mycompany.projeto_integrador;
  *
  * @author 26.00755-9
  */
-public class TelaEsperaProfessor extends javax.swing.JFrame {
+public class TelaNivel extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaEsperaProfessor.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaNivel.class.getName());
 
     /**
-     * Creates new form TelaEsperaProfessor
+     * Creates new form TelaNivel
      */
-    public TelaEsperaProfessor() {
+    public TelaNivel() {
         initComponents();
     }
 
@@ -28,32 +28,21 @@ public class TelaEsperaProfessor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnvoltar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnvoltar.setText(" ");
-        btnvoltar.setBorderPainted(false);
-        btnvoltar.setContentAreaFilled(false);
-        btnvoltar.setFocusPainted(false);
-        btnvoltar.addActionListener(this::btnvoltarActionPerformed);
-        getContentPane().add(btnvoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 180, 50));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ultimo_quiz.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1023, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvoltarActionPerformed
-        TelaInicio tela = new TelaInicio();
-        tela.setVisible(true);
-
-        this.dispose();    // TODO add your handling code here:
-    }//GEN-LAST:event_btnvoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,11 +66,9 @@ public class TelaEsperaProfessor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TelaEsperaProfessor().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelaNivel().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnvoltar;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

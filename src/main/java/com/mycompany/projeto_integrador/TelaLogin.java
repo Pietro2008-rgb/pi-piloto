@@ -71,8 +71,8 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlogarActionPerformed
-        // FIX: txtlogin agora é JTextField, .getText() funciona corretamente
-        String email = txtlogin.getText().trim();
+        // CORREÇÃO: Buscando o texto do componente correto (jTextArea2)
+        String email = jTextArea2.getText().trim();
         String senha = new String(txtsenha.getPassword());
 
         boolean usuarioExiste = Conexao.validarLogin(email, senha);
@@ -84,10 +84,9 @@ public class TelaLogin extends javax.swing.JFrame {
             tela.setVisible(true);
             dispose();
         } else {
-            JOptionPane.showMessageDialog(null,
-                "Usuário não encontrado!\nFaça o cadastro.");
-            TelaRegistrar tela = new TelaRegistrar();
-            tela.setVisible(true);
+        javax.swing.JOptionPane.showMessageDialog(null, "Usuário não encontrado!\nFaça o cadastro.");
+        TelaRegistrar tela = new TelaRegistrar();
+        tela.setVisible(true);
             dispose();
         }
     }//GEN-LAST:event_btnlogarActionPerformed

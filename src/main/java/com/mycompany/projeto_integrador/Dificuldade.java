@@ -8,14 +8,14 @@ package com.mycompany.projeto_integrador;
  *
  * @author 26.00755-9
  */
-public class TelaEsperaProfessor extends javax.swing.JFrame {
+public class Dificuldade extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaEsperaProfessor.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Dificuldade.class.getName());
 
     /**
-     * Creates new form TelaEsperaProfessor
+     * Creates new form Dificuldade
      */
-    public TelaEsperaProfessor() {
+    public Dificuldade() {
         initComponents();
     }
 
@@ -28,32 +28,42 @@ public class TelaEsperaProfessor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnvoltar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnfacil = new javax.swing.JButton();
+        btndificil = new javax.swing.JButton();
+        JLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnvoltar.setText(" ");
-        btnvoltar.setBorderPainted(false);
-        btnvoltar.setContentAreaFilled(false);
-        btnvoltar.setFocusPainted(false);
-        btnvoltar.addActionListener(this::btnvoltarActionPerformed);
-        getContentPane().add(btnvoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 180, 50));
+        btnfacil.setBorderPainted(false);
+        btnfacil.setContentAreaFilled(false);
+        btnfacil.setFocusPainted(false);
+        btnfacil.addActionListener(this::btnfacilActionPerformed);
+        getContentPane().add(btnfacil, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 190, 230));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ultimo_quiz.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1023, -1));
+        btndificil.setText("jButton1");
+        btndificil.setBorderPainted(false);
+        btndificil.setContentAreaFilled(false);
+        btndificil.setFocusPainted(false);
+        btndificil.addActionListener(this::btndificilActionPerformed);
+        getContentPane().add(btndificil, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 200, 240));
+
+        JLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/b3900ff2-e7b3-4270-abac-58e76641.png"))); // NOI18N
+        JLabel1.setText("jLabel1");
+        getContentPane().add(JLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvoltarActionPerformed
-        TelaInicio tela = new TelaInicio();
-        tela.setVisible(true);
+    private void btnfacilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfacilActionPerformed
+    
+    this.dispose(); // Fecha a tela de dificuldade
+    }//GEN-LAST:event_btnfacilActionPerformed
 
-        this.dispose();    // TODO add your handling code here:
-    }//GEN-LAST:event_btnvoltarActionPerformed
+    private void btndificilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndificilActionPerformed
+    
+    this.dispose(); // Fecha a tela de dificuldade        // TODO add your handling code here:
+    }//GEN-LAST:event_btndificilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,11 +87,12 @@ public class TelaEsperaProfessor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TelaEsperaProfessor().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Dificuldade().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnvoltar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel JLabel1;
+    private javax.swing.JButton btndificil;
+    private javax.swing.JButton btnfacil;
     // End of variables declaration//GEN-END:variables
 }
