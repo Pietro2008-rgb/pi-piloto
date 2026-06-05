@@ -56,12 +56,14 @@ public class Dificuldade extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnfacilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfacilActionPerformed
-    
+        TelaQuiz jogo = new TelaQuiz("Fácil");
+        jogo.setVisible(true);
     this.dispose(); // Fecha a tela de dificuldade
     }//GEN-LAST:event_btnfacilActionPerformed
 
     private void btndificilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndificilActionPerformed
-    
+        TelaQuiz jogo = new TelaQuiz("Difícil");
+        jogo.setVisible(true);
     this.dispose(); // Fecha a tela de dificuldade        // TODO add your handling code here:
     }//GEN-LAST:event_btndificilActionPerformed
 
